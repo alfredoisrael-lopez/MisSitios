@@ -5,7 +5,7 @@
     <artifactId>MisSitios</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
-    
+
     <licenses>
         <license>
             <name>The Apache Software License, Version 2.0</name>
@@ -13,20 +13,20 @@
             <distribution>repo</distribution>
         </license>
     </licenses>
-    
+
     <scm>
         <connection>scm:git:git@github.com:WASdev/tool.accelerate.core.git</connection>
         <developerConnection>scm:git@github.com:WASdev/tool.accelerate.core.git</developerConnection>
         <url>git@github.com:WASdev/tool.accelerate.core.git</url>
     </scm>
-    
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        
-        
+
+
         <!-- Liberty server properties -->
         <wlpServerName>LibertyProjectServer</wlpServerName>
         <testServerHttpPort>9080</testServerHttpPort>
@@ -35,14 +35,14 @@
         <warContext>myLibertyApp</warContext>
         <package.file>${project.build.directory}/${app.name}.zip</package.file>
         <packaging.type>usr</packaging.type>
-        
+
         <!-- Cloud Foundry/Bluemix properties -->
         <cf.context>mybluemix.net</cf.context>
-        <cf.target>https://api.ng.bluemix.net</cf.target>
-        <cf.space>dev</cf.space>
+        <cf.target>https://api.au-syd.bluemix.net</cf.target>
+        <cf.space>poc</cf.space>
         <cf.context.root>${cf.host}.${cf.context}/${warContext}</cf.context.root>
-        
-        <!-- The Cloud Foundry or Bluemix organization, username and password can be 
+
+        <!-- The Cloud Foundry or Bluemix organization, username and password can be
             entered here. -->
         <!-- <cf.org></cf.org> -->
         <!-- <cf.username></cf.username> -->
@@ -54,7 +54,7 @@
         <running.bluemix>false</running.bluemix>
     <app.name>MisSitios</app.name>
     </properties>
-    
+
     <repositories>
         <repository>
             <id>liberty-starter-maven-repo</id>
@@ -253,7 +253,7 @@
             <scope>compile</scope>
         </dependency>
     </dependencies>
-    
+
     <build>
         <plugins>
             <plugin>
